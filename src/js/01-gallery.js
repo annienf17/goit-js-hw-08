@@ -20,10 +20,11 @@ const galleryImages = galleryItems.map((img) =>
 gallery.insertAdjacentHTML("afterbegin", galleryImages);
 
 // SimpleLightbox.com
-let simplelightbox = new SimpleLightbox('.gallery a', {
+new SimpleLightbox('.gallery a', {
     /* options */
     captionsData: 'alt',
     captionPosition: 'bottom',
     showCounter: true,
     captionDelay: 250,
+    doubleTapZoom: 2,
   });
