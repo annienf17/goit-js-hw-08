@@ -5,5 +5,5 @@ var t="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"u
       src="${t.preview}"
       alt="${t.description}"
     /></a>
-    </li>`).join("");d.insertAdjacentHTML("afterbegin",c),new(e&&e.__esModule?e.default:e)(".gallery a",{captionsData:"alt",captionPosition:"bottom",showCounter:!0,captionDelay:250});
-//# sourceMappingURL=01-gallery.4599f30d.js.map
+    </li>`).join("");d.insertAdjacentHTML("afterbegin",c),new(e&&e.__esModule?e.default:e)(".gallery a",{captionsData:"alt",captionPosition:"bottom",showCounter:!0,captionDelay:250,doubleTapZoom:2});
+//# sourceMappingURL=01-gallery.8a682f25.js.map

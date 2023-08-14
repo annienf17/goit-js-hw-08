@@ -5,5 +5,5 @@
       src="${t.preview}"
       alt="${t.description}"
     /></a>
-    </li>`).join("");d.insertAdjacentHTML("afterbegin",c),new(e&&e.__esModule?e.default:e)(".gallery a",{captionsData:"alt",captionPosition:"bottom",showCounter:!0,captionDelay:250})}();
-//# sourceMappingURL=01-gallery.3ace99af.js.map
+    </li>`).join("");d.insertAdjacentHTML("afterbegin",c),new(e&&e.__esModule?e.default:e)(".gallery a",{captionsData:"alt",captionPosition:"bottom",showCounter:!0,captionDelay:250,doubleTapZoom:2})}();
+//# sourceMappingURL=01-gallery.66f865d9.js.map
