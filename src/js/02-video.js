@@ -3,8 +3,8 @@ import throttle from 'lodash.throttle';
 import Vimeo from '@vimeo/player';
 
 // task 5 & task 7
-const vpCurrentTime = "videoplayer-current-time";
-const refreshTime = 1000; //current time update every second
+const VP_CURRENT_TIME = "videoplayer-current-time";
+const REFRESH_TIME = 1000; //current time update every 1s
 
 // task 3 - vimeo player initialization
 const findVimeoPlayer = document.querySelector("#vimeo-player");
@@ -16,7 +16,7 @@ player.getVideoTitle().then(function(title) {
 });
 
 // task 5 & 6 - player initialization & current time in local sorage
-player.setCurrentTime(Math.round(localStorage.getItem(vpCurrentTime)))
+player.setCurrentTime(Math.round(localStorage.getItem(VP_CURRENT_TIME)))
 // seconds = the actual time that the player seeked to
 .then(seconds => console.log(`seconds: ${seconds} = the actual time that the player seeked to`))
 // the time was less than 0 or greater than the video’s duration
@@ -28,14 +28,14 @@ const onPlay = timeUpdate => {
         // ended = whether or not the video has ended
         if(ended) {
             console.log(`The video has ended`);
-            localStorage.setItem(vpCurrentTime, 0)
+            localStorage.setItem(VP_CURRENT_TIME, 0)
         } else {
             console.log("The video is being played");
-            localStorage.setItem(vpCurrentTime, timeUpdate.seconds)
+            localStorage.setItem(VP_CURRENT_TIME, timeUpdate.seconds)
         }
     });
 }
 // Events  *** task 7
-player.on('timeupdate', throttle(onPlay, refreshTime));
+player.on('timeupdate', throttle(onPlay, REFRESH_TIME));
 
 
